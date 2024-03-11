@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Writing Effect</title>
+  <style>
+    /* Add some basic styling to the text */
+    #writing-text {
+      font-size: 24px;
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Create an element where the text will be written -->
+  <div id="writing-text"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the element where the text will be written
+      const writingTextElement = document.getElementById('writing-text');
+      
+      // Your text content
+      const textContent = "Сайн байна уу намайг АльфаТэнгис чатбот гэдэг. Та хэн бэ?";
+
+      // Function to simulate typing effect
+      function typeText() {
+        let index = 0;
+
+        // Use setInterval to gradually add each character
+        const typingInterval = setInterval(function () {
+          writingTextElement.textContent += textContent[index];
+          index++;
+
+          // Check if reached the end of the text
+          if (index === textContent.length) {
+            clearInterval(typingInterval);
+          }
+        }, 50); // Adjust the interval based on your preference
+      }
+
+      // Call the function to start typing when the page loads
+      typeText();
+    });
+  </script>
+</body>
+</html>

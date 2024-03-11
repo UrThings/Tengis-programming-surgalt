@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chatBot.css">
+</head>
+<body>
+<div class="all">
+    <div><button onclick="xButton();" class="x-button">X</button></div>
+    <div class="chatbot">
+        <div class="phone">
+            <div class="phone-header">
+                <div class="left-section">
+                    <img src="battery.png" alt="battery">
+                </div>
+                <div class="middle-section"></div>
+                <div class="right-section">
+                    <img src="cellular.png" alt="cellular">
+                    <img src="wifi.png" alt="wifi">
+                </div>
+            </div>
+            <div class="header">
+            <div class="bot-name">Tengis Auto Answer Machine</div>
+            </div>
+            <div class="chat">
+            <div class="computer text">Сайн байна уу намайг АльфаТэнгис чатбот гэдэг. Та хэн вэ?</div>
+            <button onclick="
+                react();
+                ">Эцэг эх</button>
+            <button onclick="react2();">Сурагч</button>
+            <div class="computer-chat computer"></div>
+            <div class="computer-chat2 computer"></div>
+
+            </div>
+        </div>
+        <div class="chat-bar"><input type="text" name="Type Your Message" id="type ypu message" placeholder="Type your message"></div>
+    </div>
+</div>
+    <script>
+        function react() {
+        document.querySelector('.computer-chat').innerHTML = `<div class="text"> Та эсвэл таны хүүхэд программ сонирхож байвал таньд энэ вэбсайтыг санал болгож байна. Та сонирхож байна уу︖</div>
+            <p>
+            <button onclick="
+            tenma();
+            ">Тийм</button> 
+            <button onclick="
+            tengis();
+            ">Үгүй</button>
+            </p>
+            `;
+
+            
+        };
+
+        function react2() {
+        document.querySelector('.computer-chat').innerHTML = `<div class="text"> Та  программ сонирхож байвал таньд энэ вэбсайтыг санал болгож байна. Та сонирхож байна уу︖</div>
+            <p>
+            <button onclick="
+            tenma2();
+            ">Тийм</button> 
+            <button onclick="
+            tengis();
+            ">Үгүй</button>
+            </p>
+            `;
+
+            
+        };
+
+        function tenma() {
+            document.querySelector('.computer-chat2').innerHTML= `<div class="text">Та эсвэл таны хүүхэд энэхүү хичээлийг үзэж дуусгасанаар тухайн төсөлүүдийг хийж сурнаа.</div>
+            <div>
+                
+            </div>
+
+            `;
+        };
+
+        function tenma2() {
+            document.querySelector('.computer-chat2').innerHTML= `<div class="text">Та энэхүү хичээлийг үзэж дуусгасанаар тухайн төсөлүүдийг хийж сурнаа.</div>
+            <div>
+                
+            </div>
+
+            `;
+        };
+
+        function tengis() {
+            document.querySelector('.computer-chat2').innerHTML = `<div class="text">Өдрийг сайхан өнгөрүүлээрэй.</div>`;
+        };
+
+        function xButton() {
+            document.querySelector('.all').innerHTML =``
+        };
+        
+    </script>
+</body>
+</html>
